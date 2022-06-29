@@ -1,0 +1,37 @@
+<header class="my-3">
+  <div class="d-flex justify-content-center">
+    <h1>IPL Ticket Booking System</h1>
+  </div>
+</header>
+<div>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2">
+            <button class="nav-link btn btn-primary text-white">Ticket rate</button>
+          </li>
+          <li class="nav-item mx-2">
+            <button class="nav-link btn btn-primary text-white" [routerLink]="['/match-main']">Match Details</button>
+          </li>
+          <li class="nav-item mx-2">
+            <button class="nav-link btn btn-primary text-white">Report</button>
+          </li>
+          <li class="nav-item mx-2">
+            <button class="nav-link btn btn-primary text-white" [routerLink]="['/stadium-main']">Stadium Details</button>
+          </li>
+          <li class="nav-item mx-2">
+            <button class="nav-link btn btn-primary text-white">Snack items</button>
+          </li>
+          <li class="nav-item mx-2">
+            <button class="nav-link btn btn-primary text-white" [routerLink]="['/']">logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,46 @@
+<div class="container" style="padding-top:40px;">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card mx-4">
+        <div class="card-body p-4">
+          <form [formGroup]="IPLForm" (ngSubmit)="onFormSubmit()">
+            <h1 style="text-align:center">IPL TICKET BOOKING SYSTEM</h1>
+            <div class="input-group mt-4">
+              <input type="text" class="form-control" placeholder="Firstname" formControlName="FirstName">
+            </div>
+            <div *ngIf="firstname?.errors && firstname?.touched" class="text-danger m-2">
+              Firstname is required!
+               </div>
+            <div class="input-group mt-4">
+              <input type="text" class="form-control" placeholder="Lastname" formControlName="LastName">
+            </div>
+            <div *ngIf="LastName?.errors && LastName?.touched" class="text-danger m-2">
+              Lastname is required!
+               </div>
+            <div class="input-group mt-4">
+              <input type="text" class="form-control" placeholder="Email" formControlName="Email">
+            </div>
+            <div *ngIf="Email?.errors && Email?.touched" class="text-danger m-2">
+              Email is required!
+               </div>
+            <div class="input-group mt-4">
+              <input type="password" class="form-control" placeholder="Password" formControlName="Password">
+            </div>
+            <div *ngIf="Password?.errors && Password?.touched" class="text-danger m-2">
+              Password is required!
+               </div>
+            <div class="input-group mt-4">
+              <input type="text" class="form-control" placeholder="PhoneNumber" formControlName="PhoneNumber">
+            </div>
+            <div *ngIf="PhoneNumber?.errors && PhoneNumber?.touched" class="text-danger m-2">
+              PhoneNumber is required!
+               </div>
+            <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-block btn-success mt-4" [disabled]="!IPLForm.valid">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

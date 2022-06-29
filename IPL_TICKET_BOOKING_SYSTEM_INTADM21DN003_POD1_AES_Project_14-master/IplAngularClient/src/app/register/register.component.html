@@ -1,0 +1,43 @@
+<div class="container" style="padding-top:40px;">  
+  <div class="row">  
+    <div class="col-md-6 mx-auto">  
+      <div class="card mx-4">  
+        <div class="card-body p-4">  
+            <body style="background-image: url(https://static.india.com/wp-content/uploads/2020/08/IPL-Logo.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;"> </body>
+            
+          <form [FormGroup]="UserForm" (ngSubmit)="onFormSubmit()">  
+            <h1 style="text-align:center">Register</h1> 
+              <center>
+          
+            <div class="input-group mb-3">  
+              <label for="username" id="username" style="color: violet;">User name:</label>
+              <input type="text" class="form-control" placeholder="Username"  formControlName="UserName">  
+            </div>  
+            <div class="input-group mb-3">
+              <label for="username" id="lastname" style="color: violet;">login name:</label>  
+              <input type="text" class="form-control" placeholder="Loginname"  formControlName="LoginName">  
+            </div>  
+            <div class="input-group mb-3">
+              <label for="password" id="password" style="color: violet;">User name:</label>  
+              <input type="password" class="form-control" placeholder="Password"  formControlName="Password">  
+            </div>  
+            <div class="input-group mb-4"> 
+              <label for="email" id="email" style="color: violet;">Email:</label> 
+              <input type="text" class="form-control" placeholder="Email"  formControlName="Email">  
+            </div>  
+            <div class="input-group mb-4"> 
+              <label for="phone no" id="phone no" style="color: violet;">Phone no:</label> 
+              <input type="text" class="form-control" placeholder="Contact No"  formControlName="ContactNo">  
+            </div>  
+            <div class="input-group mb-4">
+              <label for="address" id="adderss" style="color: violet;">User name:</label>  
+              <input type="text" class="form-control" placeholder="Address"  formControlName="Address">  
+            </div>  
+            <button type="submit" class="btn btn-block btn-success">Add User</button> 
+              </center>
+          </form>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>

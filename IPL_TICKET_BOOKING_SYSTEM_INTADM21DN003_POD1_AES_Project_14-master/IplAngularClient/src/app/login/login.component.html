@@ -1,0 +1,38 @@
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body style="background-image: url(https://wallpapercave.com/wp/wp7104495.jpg); background-repeat: no-repeat; background-position: center; background-size: contain;"> </body>
+  <div class="container login" style="float: right; position: absolute; top: 0; right: 0;">
+    <h3><strong>Let's get started by login</strong></h3>
+  
+  
+  <form [formgroup]="signinForm" novalidate (ngsubmit)="Login();" >
+  
+  <span style="color: red;">Fields marked with * are mandatory</span><br>
+  
+  
+  <div class="form-group col-md-4 mb-3" style="float: right; position: absolute; top: 0; right: 0;">
+      <label for="email" style="color: blueviolet;">Email:<span style="color: red;">*</span></label><br>
+      <input type="email" class="form-control" id="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"style=" height:30px; width: 200px;">
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngif="f.email.errors.required" style="color: red;">Email is required</div>
+        <div *ngif="f.email.errors.email" style="color: red;">Email must be a valid email address</div>
+      </div>
+        
+     
+      
+      <label for="password" style="color:blueviolet;">Password:<span style="color: red;">*</span></label>
+      <input type="password" class="form-control" id="password" formcontrolname="password" name="password"  [ngclass]="{ 'is-invalid': submitted && f.password.errors }" style="height: 30px; width: 200px;">
+      <div *ngif="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngif="f.password.errors.required" else wrong style="color: red;">Password is required</div>
+        <div *ngif="f.password.errors.minlength" style="color: red;">Password must be at least 4 characters</div>
+      </div>
+
+   
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  </form>
+  </div>
